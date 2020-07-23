@@ -1,0 +1,12 @@
+.AddButton {
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  background-color: #18e436;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.1s;
+}
+.AddButton:hover {
+  background-color: #13bd2c;
+}

@@ -1,0 +1,14 @@
+.ToggleButton {
+  color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.todo {
+  color: black;
+  border: solid 1px black;
+}
+.didit {
+  background-color: royalblue;
+  border: solid 1px royalblue;
+}

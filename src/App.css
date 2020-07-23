@@ -1,7 +1,41 @@
+html {
+  height: 100%;
+  background-color: #f1f1f1;
+}
+#root {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
 .App {
   text-align: center;
+  max-width: 650px;
+  height: 100%;
+  margin: auto;
 }
-
+.eachTask {
+  margin: 10px 0px;
+}
+.Card {
+  background-color: white;
+  margin: 20px 0px;
+  border: solid 1px grey;
+  border-radius: 5px;
+  padding: 60px 30px;
+}
+.margin-5 {
+  margin: 5px;
+}
+.margin-10 {
+  margin: 10px;
+}
+.margin-15 {
+  margin: 15px;
+}
+.margin-20 {
+  margin: 20px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

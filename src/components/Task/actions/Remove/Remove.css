@@ -1,0 +1,8 @@
+.DeleteButton {
+  background-color: tomato;
+  color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: solid 1px tomato;
+}

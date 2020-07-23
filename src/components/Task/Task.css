@@ -1,0 +1,15 @@
+.task {
+  border: solid 1px #f1f1f1;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.containerActions {
+  display: flex;
+}
+.containerActions .eachAction {
+  margin: 0px 10px;
+}

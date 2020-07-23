@@ -1,26 +1,67 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import store from "./store";
+import AddTaskButton from "./components/AddTaskButton/AddTaskButton";
+import Task from "./components/Task/Task";
+import InputTextTask from "./components/InputTextTask/InputTextTask";
+import { connect } from "react-redux";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      taskText: "",
+      tasks: [],
+    };
+    this.textChange = this.handleTaskTextChange.bind(this);
+    this.submit = this.handleSubmit.bind(this);
+  }
+  componentDidMount() {
+    store.subscribe(() => {
+      this.setState({ tasks: store.getState().store.tasks });
+    });
+  }
+
+  handleTaskTextChange(event) {
+    this.setState({ taskText: event });
+  }
+
+  handleSubmit() {
+    this.setState({ taskText: "" });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <div className="Card">
+          <h1>My TODO List</h1>
+          <div className="margin-20">
+            <InputTextTask
+              value={this.state.taskText}
+              placeholder="Write your new task"
+              onChange={this.textChange}
+            />
+          </div>
+          {this.state.tasks.length > 0 && (
+            <div className="margin-20">
+              {this.state.tasks.map((item, index) => {
+                return (
+                  <div className="eachTask" key={index}>
+                    <Task data={item} index={index} />
+                  </div>
+                );
+              })}
+            </div>
+          )}
+          <div className="margin-20">
+            <AddTaskButton task={this.state.taskText} OnSubmit={this.submit}>
+              Add Task
+            </AddTaskButton>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
-
-export default App;
+export default connect()(App);
