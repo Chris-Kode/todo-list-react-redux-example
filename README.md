@@ -4,6 +4,25 @@ A simple TODO list made with react and redux
 
 ![pic](./documentation/pic.PNG)
 
+## Why?
+I want learn React framework and Redux, so i made this application for learning purposes. Is very simple you can make Tasks, success and remove them.
+
+## How to install?
+1º clone the repository.
+```
+  git clone https://github.com/Chris-Kode/todo-list-react-redux-example.git
+```
+2º Install the dependencies
+```
+  npm install
+``` 
+3º Run the application
+```
+  npm run start
+```
+
+4º And enjoy!
+
 ## Available Scripts
 
 In the project directory, you can run:
