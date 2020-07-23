@@ -1,4 +1,6 @@
-# A simple TODO list made with react and redux 
+<h1 align="center">
+A simple TODO list made with react and redux 
+</h1>
 
 ![pic](./documentation/pic.PNG)
 
